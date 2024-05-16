@@ -1,0 +1,300 @@
+
+
+  /* Define the animation */
+  @keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply the animation to cards */
+.card1,
+.card2,
+.card3 {
+    animation: slideIn 0.5s ease forwards;
+}
+
+
+/* Style for the fixed image */
+.fixed-image {
+    /* position: fixed; */
+    bottom: 20px; 
+    center: 20px; 
+    z-index: 999;
+    /* Ensures it's above other content */
+}
+
+/* Hover effect for the image */
+.fixed-image img {
+    transition: transform 0.3s ease;
+}
+
+.fixed-image img:hover {
+    transform: scale(1.1);
+    /* Increase size on hover */
+
+}
+
+
+.fixed-image{
+     height:700px;
+       /* width:1380px; */
+    padding-top:60px; 
+    background-size: cover;
+    /* width: 100%; */
+    
+}
+/* default code */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* margin: 400px auto; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.head {
+    text-align: center;
+    margin: auto;
+}
+
+/* Float four columns side by side */
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 100px 0 -5px;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+   
+
+/* Style the counter cards */
+.card1 {
+    overflow: hidden;
+    overflow-wrap: break-word ;
+    max-height: 300px auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+    color: #555;
+    font-size: 20px;
+
+}
+
+.card2 {
+    overflow: hidden;
+    overflow-wrap: break-word ;
+    max-height: 300px auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #555;
+    color: #f1f1f1;
+    font-size: 20px;
+
+}
+
+.card3 {
+    overflow: hidden;
+    overflow-wrap: break-word ;
+    max-height: 300px auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    color: #f1f1f1;
+    background-color: #ce8e17;
+    font-size: 20px;
+
+
+}
+
+.card1:hover {
+    background-color: rgb(0, 255, 191);
+}
+
+.card2:hover {
+    background-color: rgb(76, 0, 255);
+}
+
+.card3:hover {
+    background-color: #00ccff;
+}
+
+.card1 h3 {
+    justify-content: center;
+    text-align: center;
+    font-size: 40px;
+    border: 1px solid black;
+    border-radius: 50%;
+    background: rgb(205, 195, 195);
+    width: 80px;
+    height: 80px;
+    margin-bottom: 50px;
+    margin: auto;
+}
+
+.card1 p {
+    margin: 30px;
+}
+
+.card2 h3 {
+    justify-content: center;
+    text-align: center;
+    font-size: 40px;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 10px;
+    background: rgb(205, 195, 195);
+    width: 80px;
+    height: 80px;
+    margin-bottom: 50px;
+    margin: auto;
+}
+
+.card2 p {
+    margin: 30px;
+
+}
+
+.card3 h3 {
+    justify-content: center;
+    text-align: center;
+    font-size: 40px;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 10px;
+    background: rgb(205, 195, 195);
+    width: 80px;
+    height: 80px;
+    margin-bottom: 50px;
+    margin: auto;
+}
+
+.card3 p {
+    margin: 30px;
+}
+
+
+
+/* Responsive columns */
+@media screen and (max-width: 481px) {
+    .column {
+        width: 100%;
+        display: block;
+        /* margin-bottom: 20px;  */
+    }
+
+     .fixed-image{
+        height: 100%;
+        max-height: auto ;
+       background-size: cover;
+       
+   }
+   .row {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px 0 -5px;
+
+} 
+   
+
+ }
+
+
+ 
+ 
+
+@media screen and (max-width: 768px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .fixed-image{
+        height: 100%;
+        max-height: auto ;
+       background-size: cover;
+       
+   }
+   .row {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px 0 -5px;
+
+}
+}
+
+@media screen and (max-width: 991px) {
+    .column {
+        width: 100%;
+        width: 500px;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .fixed-image{
+        height: 100%;
+        max-height: auto ;
+       background-size: cover;
+       
+   }
+   .row {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px 0 -5px;
+
+}
+  
+
+
+}
+@media screen and (max-width:1162px) {
+    .column {
+        width: 100%;
+        max-width: 500px;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .fixed-image{
+        height: 100%;
+        max-height: auto ;
+       background-size: cover;
+       
+   }
+   .row {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px 0 -5px;
+
+}
+  
+
+
+} 
